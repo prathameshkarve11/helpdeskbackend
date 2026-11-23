@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get help</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <h1>Tell us your problem</h1>
+    <p>Send your request. You can close this page and come back any time to read our answer.</p>
+  </header>
+
+  <!-- 1. new request -->
+  <section id="newView" class="card">
+    <form id="newForm">
+      <label for="name">Your name</label>
+      <input id="name" maxlength="80" required>
+      <label for="email">Your email</label>
+      <input id="email" type="email" maxlength="120" required>
+      <label for="message">What is your problem?</label>
+      <textarea id="message" maxlength="3000" required></textarea>
+      <button type="submit">Send request</button>
+      <p id="newErr" class="err"></p>
+    </form>
+  </section>
+
+  <!-- 2. my request + replies -->
+  <section id="ticketView" class="card hidden">
+    <div class="top">
+      <h2>Your request</h2>
+      <span id="status" class="badge"></span>
+    </div>
+    <p class="muted">Your code: <span id="codeLine" class="code"></span> — keep it with your email to reopen this request on any device.</p>
+    <div id="thread" class="thread"></div>
+    <form id="followForm">
+      <label for="follow">Add a message</label>
+      <textarea id="follow" maxlength="3000" required></textarea>
+      <button type="submit">Send</button>
+      <p id="followErr" class="err"></p>
+    </form>
+    <p><button id="newBtn" class="link" type="button">Start a new request</button></p>
+  </section>
+
+  <!-- 3. look up an old request -->
+  <section id="lookupView" class="card">
+    <h3>Already sent a request?</h3>
+    <form id="lookupForm">
+      <div class="row">
+        <div><label for="lcode">Your code</label><input id="lcode" required></div>
+        <div><label for="lemail">Your email</label><input id="lemail" type="email" required></div>
+      </div>
+      <button type="submit">Open my request</button>
+      <p id="lookupErr" class="err"></p>
+    </form>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

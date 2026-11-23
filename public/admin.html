@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Admin – requests</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap wide">
+  <header><h1>Admin</h1><p>Reply to visitor requests.</p></header>
+
+  <section id="loginView" class="card">
+    <form id="loginForm">
+      <label for="pw">Admin password</label>
+      <input id="pw" type="password" required>
+      <button type="submit">Log in</button>
+      <p id="loginErr" class="err"></p>
+    </form>
+  </section>
+
+  <section id="listView" class="hidden">
+    <div class="card top">
+      <div class="row" style="flex:1">
+        <div><label for="author" style="margin-top:0">Reply as (your name)</label><input id="author" maxlength="60" placeholder="e.g. Aditya"></div>
+      </div>
+      <div>
+        <button id="refresh" type="button">Refresh</button>
+        <button id="logout" type="button" class="link">Log out</button>
+      </div>
+    </div>
+    <p id="count" class="muted"></p>
+    <div id="tickets"></div>
+  </section>
+</main>
+<script src="admin.js"></script>
+</body>
+</html>
